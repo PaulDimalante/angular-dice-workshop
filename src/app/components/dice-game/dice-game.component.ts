@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RollService } from 'src/app/roll.service';
-import { Observable } from 'rxjs';
 
 function aggregate(arr) {
   return arr.reduce((total,num) => total+num, 0);
@@ -34,14 +33,12 @@ export class DiceGameComponent implements OnInit {
     this.service.roll().subscribe(num => {
       this.playerDiceList.push(num);
     });
-    console.log("Players dice="+this.playerDiceList.toString());
   }
 
   opponentRoll(): void {
     this.service.roll().subscribe(num => {
       this.opponentDiceList.push(num);
     });
-    console.log("Opponents dice="+this.opponentDiceList.toString());
   }
 
   isGameLost(): boolean {
