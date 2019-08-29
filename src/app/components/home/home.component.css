@@ -1,0 +1,43 @@
+.block-column {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 0px 20px 0px 0px;
+}
+
+.dice {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.selected{
+    margin-left: 100px;
+}
+
+.lose {
+    -webkit-animation-name: lose;
+    -webkit-animation-duration: 2s;
+    animation-name: lose;
+    animation-duration: 2s;
+    animation-iteration-count: 10;
+}
+
+.win{
+    -webkit-animation-name: win;
+    -webkit-animation-duration: 2s;
+    animation-name: win;
+    animation-duration: 2s;
+    animation-iteration-count: 10; 
+}
+
+@keyframes lose {
+    from {color: red;}
+    to {color: white;}
+}
+
+@keyframes win {
+    from {color: green;}
+    to {color: white;}
+}

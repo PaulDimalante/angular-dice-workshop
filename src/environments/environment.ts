@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  mobOrderController: "http://localhost:8082/moborder",
+
+  mobOrderSaveNew: "http://localhost:8082/moborder/create",
+
+  scoreBoardController: "http://localhost:8082/scoreboard"
+
 };
 
 /*

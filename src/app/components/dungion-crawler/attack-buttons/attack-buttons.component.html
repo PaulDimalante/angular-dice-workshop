@@ -1,0 +1,21 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="attack">
+    <th mat-header-cell *matHeaderCellDef> <span class="columnHeaders attack-design" id="attackHeader">Attack </span></th>
+    <td mat-cell *matCellDef=""> <img class="buttonImg" src="assets/images/Attack.png"><button class="button-design attack-design" id="attackButton" mat-raised-button [disabled]="isDisabled" (click)="buttonClicked('Attack')">Attack</button></td>
+  </ng-container>
+  <ng-container matColumnDef="counterattack">
+    <th mat-header-cell *matHeaderCellDef> <span class="columnHeaders counter-design" id="counterHeader">Counter </span> </th>
+    <td mat-cell *matCellDef=""> <img class="buttonImg" src="assets/images/Counter.png"><button class="button-design counter-design" id="counterButton" mat-raised-button [disabled]="isDisabled" (click)="buttonClicked('Counter')">Counter</button></td>
+  </ng-container>
+  <ng-container matColumnDef="defend">
+    <th mat-header-cell *matHeaderCellDef> <span class="columnHeaders defend-design" id="defendHeader">Defend </span></th>
+    <td mat-cell *matCellDef=""> <img class="buttonImg" src="assets/images/Shield.png"><button class="button-design defend-design" id="defendButton" mat-raised-button [disabled]="isDisabled" (click)="buttonClicked('Defend')">Defend</button></td>
+  </ng-container>
+  <ng-container matColumnDef="flee">
+    <th mat-header-cell *matHeaderCellDef> <span class="columnHeaders flee-design" id="fleeHeader">Flee </span></th>
+    <td mat-cell *matCellDef=""> <img class="buttonImg" src="assets/images/Flee.png"><button class="button-design flee-design" id="fleeButton" mat-raised-button [disabled]="isDisabled" (click)="buttonClicked('Flee')">Flee</button></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,24 @@
+<div class = "block-column">
+  <div>
+    <!-- photos here -->
+    <img id="playersClass" [src]="currentImage"/>
+    <app-enemy-ui [nextMob] = "triggerNextMob.asObservable()" [enemyAttackTypeEvent] = "triggerEnemyAttackType.asObservable()" [enemyDiceRollEvent]="triggerEnemyDiceRolls.asObservable()" (attackType)="getEnemyAttack($event)" (enemyDiceRolls)="getEnemyDiceRolls($event)"></app-enemy-ui>
+    <span id="playersHP">Your HP: {{playerHealth}}</span>
+    <span id ="enemyHP">Enemy Hp: {{enemyHealth}}</span>
+    <div>
+      <h2>PLAYER</h2>
+      <div class = "dice">
+        <h1> <img *ngFor="let dice of playerDiceRolls" src="assets/images/{{dice}}.png"/></h1>
+      </div>
+      <h2>ENEMY</h2>
+      <div class = "dice">
+        <h1> <img *ngFor="let enemyDice of enemyDiceRolls" src="assets/images/{{enemyDice}}.png"/></h1>
+      </div>
+    </div>
+    <p><i>{{enemyAttackTypeOnHtml}}</i></p>
+    <p><i>Damage Dealt this turn: {{dmgDealt}}</i></p>
+    <p><i>Damage Blocked this turn: {{dmgBlocked}}</i></p>
+    <p><i>Damage Taken this turn: {{dmgTaken}}</i></p>
+  </div>
+</div>
+<app-attack-buttons (currentPlayerCommand)="getPlayersAttack($event)"></app-attack-buttons>

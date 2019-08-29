@@ -1,0 +1,34 @@
+td.mat-cell {
+    padding: 10px;
+}
+
+.columnHeaders {
+    font-size: 40px;
+    margin: 0px 40px 0px 0px;
+}
+
+.buttonImg {
+  height: 50px;
+  width: 50px;  
+}
+
+.button-design {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.attack-design {
+    color: red;
+}
+
+.counter-design {
+    color: green;
+}
+
+.defend-design {
+    color: blue;
+}
+
+.flee-design {
+    color: #ff4081;
+}

@@ -1,0 +1,12 @@
+#enemyClass {
+    margin: 0px 0px 0px 100px;
+    height: 400px;
+    width: 400px;
+}
+
+p{
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: right;
+}

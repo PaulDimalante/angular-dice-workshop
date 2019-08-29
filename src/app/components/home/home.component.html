@@ -1,0 +1,21 @@
+<div class = "block-column">
+  <div>
+    <input placeholder="Enter username" [(ngModel)]="username" (change)="checkStartButton()"/>
+    <h2>Pick your class! <span style="color: red">{{classSelected}}</span></h2>
+    <div class = "dice">
+      <button mat-raised-button color="warn" (click)="playerClass('Fighter')">Fighter</button>
+      <button mat-raised-button color="accent" (click)="playerClass('Ranger')">Ranger</button> 
+      <button mat-raised-button color="primary" (click)="playerClass('BlackMage')">Black Mage</button>
+    </div>
+    <div>
+      <h2>Pick your difficulty! <span style="color: red">{{difficultySelected}}</span></h2>
+      <div class = "dice">
+        <button mat-raised-button color="accent" (click)="difficulty('Easy')">Easy</button>
+        <button mat-raised-button color="primary" (click)="difficulty('Medium')">Medium</button>
+        <button mat-raised-button color="warn" (click)="difficulty('Hard')">Hard</button>
+      </div>
+    </div>
+  </div>
+  <h2 style = "color: red">Be prepared to die.</h2>
+  <button [disabled]="isDisabled" mat-raised-button color="primary" (click)="startGame()">Start Game</button>
+</div>
